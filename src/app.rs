@@ -1,10 +1,12 @@
 
 mod hello_world;
 mod counter;
+mod functional_counter;
 
 use yew::prelude::*;
 use hello_world::HelloWorld;
 use counter::Counter;
+use functional_counter::FunctionalCounter;
 
 #[function_component(App)]
 pub fn app() -> Html {
@@ -16,6 +18,8 @@ pub fn app() -> Html {
             <HelloWorld/>
             <h1>{ "Counter:" }</h1>
             <Counter/>
+            <h1>{ "Functional Counter:" }</h1>
+            <FunctionalCounter/>
         </main>
     }
 }

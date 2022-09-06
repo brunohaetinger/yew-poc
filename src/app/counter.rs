@@ -40,7 +40,10 @@ impl Component for Counter {
         html! {
             <div class="counter-container">
                 <button onclick={link.callback(|_| Msg::SubOne)}>{ "➖" }</button>
-                <p>{ self.value }</p>
+                <p>
+                    <b>{ "Current value: " }</b>
+                    { self.value }
+                </p>
                 <button onclick={link.callback(|_| Msg::AddOne)}>{ "➕" }</button>
             </div>
         }
